@@ -2,8 +2,6 @@
 
 |   参数名   |   类型   |   可选参数   |   默认值   |  描述    |
 | -------- | -------- | ----------- | --------- | -------- |
-| 参数名 | 类型 | 可选参数 | 默认值 | 描述 |
-| ----- | --- | ------- | ----- | ---- |
 | type  | string | success,warn,info,error | success | 设置alert提示框的主题风格 |
 | showIcon | boolean | true,false | false | 是否显示icon图标 |
 | message  | string  | -- | '' | 默认标题内容 |
