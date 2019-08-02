@@ -1,6 +1,6 @@
 {
-  "name": "tb-ui",
-  "version": "1.0.0",
+  "name": "@tianbo/tb-ui",
+  "version": "1.0.3",
   "description": "tianboUI",
   "main": "index.js",
   "scripts": {

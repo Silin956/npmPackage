@@ -1,9 +1,8 @@
 config
 demo
-dist/demo
-dist/es
+bundle
+src
 node_modules
 package-lock.json
-loaders
 .babelrc
 .gitignore

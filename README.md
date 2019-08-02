@@ -1,136 +1,16 @@
-##目录
-```
-.
-├── README.md
-├── bundle
-│   ├── assets
-│   │   └── fonts
-│   │       ├── demo.css
-│   │       ├── iconfont.css
-│   │       ├── iconfont.eot
-│   │       ├── iconfont.js
-│   │       ├── iconfont.svg
-│   │       ├── iconfont.ttf
-│   │       ├── iconfont.woff
-│   │       └── iconfont.woff2
-│   ├── index.html
-│   ├── main.css
-│   └── main.min.js
-├── config
-│   ├── webpack.conf.js
-│   ├── webpack.dev.conf.js
-│   └── webpack.pro.conf.js
-├── demo
-│   ├── index.html
-│   └── index.js
-├── dist
-│   ├── README.md
-│   ├── es5
-│   │   ├── TBalert
-│   │   │   ├── README.md
-│   │   │   ├── TBalert.js
-│   │   │   ├── index.js
-│   │   │   ├── style.css
-│   │   │   └── style.scss
-│   │   ├── TBmodel
-│   │   │   ├── TBmodel.js
-│   │   │   ├── index.js
-│   │   │   ├── style.css
-│   │   │   └── style.scss
-│   │   ├── assest
-│   │   │   └── fonts
-│   │   │       ├── demo.css
-│   │   │       ├── iconfont.css
-│   │   │       ├── iconfont.eot
-│   │   │       ├── iconfont.js
-│   │   │       ├── iconfont.svg
-│   │   │       ├── iconfont.ttf
-│   │   │       ├── iconfont.woff
-│   │   │       └── iconfont.woff2
-│   │   ├── assets
-│   │   │   └── fonts
-│   │   │       ├── demo.css
-│   │   │       ├── iconfont.css
-│   │   │       ├── iconfont.eot
-│   │   │       ├── iconfont.js
-│   │   │       ├── iconfont.svg
-│   │   │       ├── iconfont.ttf
-│   │   │       ├── iconfont.woff
-│   │   │       └── iconfont.woff2
-│   │   ├── index.js
-│   │   └── utils
-│   │       ├── component.js
-│   │       ├── contents.js
-│   │       └── index.js
-│   ├── lib
-│   │   ├── TBalert
-│   │   │   ├── README.md
-│   │   │   ├── TBalert.jsx
-│   │   │   ├── index.js
-│   │   │   ├── style.css
-│   │   │   └── style.scss
-│   │   ├── TBmodel
-│   │   │   ├── TBmodel.jsx
-│   │   │   ├── index.js
-│   │   │   ├── style.css
-│   │   │   └── style.scss
-│   │   ├── assest
-│   │   │   └── fonts
-│   │   │       ├── demo.css
-│   │   │       ├── iconfont.css
-│   │   │       ├── iconfont.eot
-│   │   │       ├── iconfont.js
-│   │   │       ├── iconfont.svg
-│   │   │       ├── iconfont.ttf
-│   │   │       ├── iconfont.woff
-│   │   │       └── iconfont.woff2
-│   │   ├── assets
-│   │   │   └── fonts
-│   │   │       ├── demo.css
-│   │   │       ├── iconfont.css
-│   │   │       ├── iconfont.eot
-│   │   │       ├── iconfont.js
-│   │   │       ├── iconfont.svg
-│   │   │       ├── iconfont.ttf
-│   │   │       ├── iconfont.woff
-│   │   │       └── iconfont.woff2
-│   │   ├── index.js
-│   │   └── utils
-│   │       ├── component.js
-│   │       ├── contents.js
-│   │       └── index.js
-│   └── package.json
-├── package-lock.json
-├── package.json
-├── src
-│   ├── TBalert
-│   │   ├── README.md
-│   │   ├── TBalert.jsx
-│   │   ├── index.js
-│   │   ├── style.css
-│   │   └── style.scss
-│   ├── TBmodel
-│   │   ├── TBmodel.jsx
-│   │   ├── index.js
-│   │   ├── style.css
-│   │   └── style.scss
-│   ├── assets
-│   │   └── fonts
-│   │       ├── demo.css
-│   │       ├── iconfont.css
-│   │       ├── iconfont.eot
-│   │       ├── iconfont.js
-│   │       ├── iconfont.svg
-│   │       ├── iconfont.ttf
-│   │       ├── iconfont.woff
-│   │       └── iconfont.woff2
-│   ├── index.js
-│   └── utils
-│       ├── component.js
-│       ├── contents.js
-│       └── index.js
-└── tree.text
+> TBAlert警告组件
+##参数
+| 参数名 | 类型 | 可选参数 | 默认值 | 描述 |
+| ----- | --- | ------- | ----- | ---- |
+| type  | string | success,warn,info,error | success | 设置alert提示框的主题风格 |
+| showIcon | boolean | true,false | false | 是否显示icon图标 |
+| message  | string  | -- | '' | 默认标题内容 |
+| description | string | -- | '' | 默认详情描述信息 |
+| closeable   | boolean | true,false | true | 设置默认状态下是否显示关闭按钮 |
+| closeText   | string  | -- | x | 默认关闭按钮样式
 
-28 directories, 101 files
-
-```
+##方法
+| 方法名 | 说明 |
+| ----- | --- |
+| beforeClose | alert提示框关闭前操作 |
+| onClose | 点击关闭按钮关闭时操作 |
