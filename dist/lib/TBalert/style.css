@@ -1,0 +1,59 @@
+@import url(../assets/fonts/iconfont.css);
+.tb-alert {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  padding: 8px 15px;
+  font-size: 14px; }
+  .tb-alert .tb-alert-icon {
+    float: left; }
+  .tb-alert .tb-alert-message {
+    float: left;
+    font-size: 16px;
+    margin-left: 6px; }
+    .tb-alert .tb-alert-message .tb-alert-title {
+      margin-bottom: 4px;
+      color: rgba(0, 0, 0, 0.85); }
+    .tb-alert .tb-alert-message .tb-alert-description {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.5); }
+  .tb-alert .tb-alert-close {
+    float: right;
+    cursor: pointer; }
+  .tb-alert .icon-tishichenggong {
+    color: #1890ff;
+    font-size: 20px; }
+  .tb-alert .icon-Group- {
+    color: #52c41a;
+    font-size: 20px; }
+  .tb-alert .icon-jinggao {
+    color: #faad14;
+    font-size: 20px; }
+  .tb-alert .icon-error {
+    color: #f5222d;
+    font-size: 20px; }
+
+.tb-alert-success {
+  background: #e6f7ff;
+  border: 1px solid #91d5ff; }
+
+.tb-alert-warn {
+  background: #fffbe6;
+  border: 1px solid #ffe58f; }
+
+.tb-alert-info {
+  background: #f6ffed;
+  border: 1px solid #b7eb8f; }
+
+.tb-alert-error {
+  background: #fff1f0;
+  border: 1px solid #ffa39e; }
+
+.clear:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
