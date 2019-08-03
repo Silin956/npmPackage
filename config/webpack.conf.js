@@ -34,17 +34,18 @@ module.exports = {
           }
         }
       },
-      {
-        test: /\.(png|jpg|jpeg|ttf|eot|svg|woff|gif)$/,
-        exclude: path.resolve(__dirname, '../src/assets/fonts'),
-        use: [
-          {
-            loader: "file-loader",
-          }
-        ]
-      },
+      // {
+      //   test: /\.(png|jpg|jpeg|ttf|eot|svg|woff|gif)$/,
+      //   exclude: path.resolve(__dirname, '../src/assets'),
+      //   use: [
+      //     {
+      //       loader: "file-loader",
+      //     }
+      //   ]
+      // },
       {
         test: /\.(png|jpg|jpeg|ttf|eot|svg|woff|gif)$/i,
+        exclude: path.resolve(__dirname, '../src/assets'),
         use: [
           {
             loader: "url-loader",
