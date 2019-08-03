@@ -54,6 +54,8 @@ nrm del 仓库名  // 删除某个npm仓库源
 + 依赖包安装
 
 ```
+nrm use tianbo // 切换仓库源至tianbo
+npm login // 登陆npm，账号密码在Nodejs性能平台->模块仓库->我的信息中查看
 npm i @tianbo/tb-ui --save-dev // 安装@tianbo/tb-ui模块
 
 ```
