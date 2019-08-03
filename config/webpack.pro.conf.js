@@ -26,13 +26,15 @@ module.exports = Object.assign({}, base, {
     },{
         from: path.resolve(__dirname, '../src'),
         to: path.resolve(__dirname, '../dist/lib')
-      },{
-        from: path.resolve(__dirname, '../package.json'),
-        to: path.resolve(__dirname, '../dist/package.json')
-      },{
-        from: path.resolve(__dirname, '../README.md'),
-        to: path.resolve(__dirname, '../dist/README.md'),
-      }]),
+      },
+      // {
+      //   from: path.resolve(__dirname, '../package.json'),
+      //   to: path.resolve(__dirname, '../dist/package.json')
+      // },{
+      //   from: path.resolve(__dirname, '../README.md'),
+      //   to: path.resolve(__dirname, '../dist/README.md'),
+      // }
+    ]),
     new BundleAnalyzerPlugin(),
     ...base.plugins
   ]

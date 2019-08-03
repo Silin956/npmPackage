@@ -1,6 +1,6 @@
 import React  from 'react';
 import ReactDOM from 'react-dom';
-import { TBModel, TBAlert } from '../src';
+import { TBModel, TBAlert } from '../index';
 
 const App = () => {
   return (

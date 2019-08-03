@@ -2,6 +2,7 @@ config
 demo
 bundle
 src
+dist/lib
 node_modules
 package-lock.json
 .babelrc
