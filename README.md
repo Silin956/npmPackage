@@ -36,7 +36,20 @@
 // 生产环境下webpack使用了webpack-bundle-analyzer性能检测插件，当项目执行npm run build或是npm run analyz命令后，浏览器会自动在默认8080端口下自动打开项目各文件体积查看的可视化界面
 "analyz": "cross-env NODE_ENV=production npm_config_report=true npm run build",
 
+```js
+
+> 项目运行
+
 ```
+git clone https://github.com/MGLHF/npmPackage.git // 克隆项目
+
+cd npmPackage // 进入项目目录
+
+npm install // 安装本地依赖
+
+npm start // 运行项目
+
+```js
 
 > 使用指南
 
@@ -50,7 +63,7 @@ nrm ls // 查看当前npm仓库源及已安装的所有npm仓库源
 nrm use 仓库名  // 切换npm的仓库源
 nrm del 仓库名  // 删除某个npm仓库源
 
-```
+```js
 
 + 依赖包安装
 
@@ -59,14 +72,14 @@ nrm use tianbo // 切换仓库源至tianbo
 npm login // 登陆npm，账号密码在Nodejs性能平台->模块仓库->我的信息中查看
 npm i @tianbo/tb-ui --save-dev // 安装@tianbo/tb-ui模块
 
-```
+```js
 
 + 其他
 
 ```
 npm publish // 打包并上传组件至npm仓库（注意：每次上传前需修改项目版本号）
 
-```
+```js
 
 
 > TBAlert组件
