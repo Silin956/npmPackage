@@ -1,5 +1,7 @@
 > TBAlert警告组件
+
 ##参数
+
 | 参数名 | 类型 | 可选参数 | 默认值 | 描述 |
 | ----- | --- | ------- | ----- | ---- |
 | type  | string | success,warn,info,error | success | 设置alert提示框的主题风格 |
@@ -10,6 +12,7 @@
 | closeText   | `React.ReactNode`  | -- | x | 默认关闭按钮样式
 
 ##方法
+
 | 方法名 | 说明 |
 | ----- | --- |
 | beforeClose | alert提示框关闭前操作 |
