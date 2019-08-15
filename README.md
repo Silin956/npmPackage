@@ -7,17 +7,18 @@
 + bundle文件夹（项目整体打包后的文件夹，内含css，js，html和静态资源文件）
 + config文件夹（webpack配置文件夹，内含base，dev，pro三种配置，覆盖开发和生产版本配置）
 + demo文件夹（项目模块测试文件夹，内含项目html和入口文件index.js，主要通过再此引入写好的模块进行参数和方法功能测试）
-+ dist文件夹（项目npm模块打包文件夹，内含es5文件夹【组件es5版本文件】；lib文件夹【组件es6版本文件】，es5最终上传npm使用）
++ dist文件夹（项目npm模块打包文件夹，内含es5文件夹【组件es5版本文件】；lib文件夹【组件es6版本文件】）
 + src文件夹（模块开发文件夹，内含各个正在开发及已开发好的模块，其中utils和fonts文件夹主要为模块工具文件夹和字体icon图标文件夹）
 + index.js文件（es5语法） （将dist/es5下es5转换好的模块组件进行引入和暴露，方便项目npm安装依赖包后从@tianbo/tb-ui访问并引入组件）
 + .npmignore文件 （项目执行npm publish上传文件至npm时需要忽略的文件定义在次文件中）
-+ ———>本项目需上传值npm文件：dist/es5、index.js、package.json、README.md
++ ———>本项目需上传值npm文件：dist/es5、dist/lib、index.js、package.json、README.md
 + package.json文件 （项目依赖、名称、版本信息、主要运行及打包命令）
 
 #### package.json文件主要命令简述：
 
 ```
 // 项目启动命令（定义NODE_ENV环境变量为development开发环境，方便webpack加载process.env.NODE_ENV=development时相应的loader和plugins）
+"dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.conf.js --open",
 "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.conf.js --open",
 
 // 项目整体文件打包命令（定义NODE_ENV环境变量为production开发环境，方便webpack加载process.env.NODE_ENV=production时相应的loader和plugins）
@@ -60,6 +61,13 @@ npm i @tianbo/tb-ui --save-dev // 安装@tianbo/tb-ui模块
 
 ```
 
++ 其他
+
+```
+npm publish // 打包并上传组件至npm仓库（注意：每次上传前需修改项目版本号）
+
+```
+
 
 > TBAlert组件
 
@@ -67,12 +75,12 @@ npm i @tianbo/tb-ui --save-dev // 安装@tianbo/tb-ui模块
 
 |   参数名   |   类型   |   可选参数   |   默认值   |  描述    |
 | -------- | -------- | ----------- | --------- | -------- |
-| type  | string | success,warn,info,error | success | 设置alert提示框的主题风格 |
-| showIcon | boolean | true,false | false | 是否显示icon图标 |
+| type  | string | `success | warn | info | error` | success | 设置alert提示框的主题风格 |
+| showIcon | boolean | `true | false` | false | 是否显示icon图标 |
 | message  | string  | -- | '' | 默认标题内容 |
 | description | string | -- | '' | 默认详情描述信息 |
-| closeable   | boolean | true,false | true | 设置默认状态下是否显示关闭按钮 |
-| closeText   | string  | -- | x | 默认关闭按钮样式 |
+| closeable   | boolean | `true | false` | true | 设置默认状态下是否显示关闭按钮 |
+| closeText   | string  | -- | `<span>x<span>` | 默认关闭按钮样式 |
 
 #### 方法
 

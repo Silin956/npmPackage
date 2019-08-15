@@ -9,7 +9,7 @@ module.exports = {
     filename: "[name].min.js"
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx", ".ts", ".tsx"]
   },
   module: {
     rules: [
@@ -23,6 +23,12 @@ module.exports = {
           "css-loader",
           "sass-loader"
         ]
+      },
+      {
+        test: /\.(tsx|ts)?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, '../src'),
       },
       {
         test: /\.(jsx|js)$/,
@@ -63,8 +69,6 @@ module.exports = {
       template: "./demo/index.html"
     }),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
       filename: "[name].css",
       chunkFilename: "[id].css"
     })

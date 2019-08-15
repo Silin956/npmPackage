@@ -7,6 +7,6 @@ const TBModel = () => {
     <div className="model">你好啊</div>
       Model框
     </>
-  )
-}
+  );
+};
 export default TBModel;

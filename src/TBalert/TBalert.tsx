@@ -1,16 +1,47 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { Component } from '../utils';
 import './style.scss';
 
-export default class TBAlert extends Component {
-  constructor(props) {
-    super(props)
+interface TBAlertProps {
+  type: 'success' | 'warn' | 'error' | 'info'; // alert类型
+  showIcon: boolean; // 是否显示icon图标
+  message: string; // 默认标题
+  description: string; // 默认详情描述
+  closeable: boolean; // 默认显示关闭按钮
+  closeText: React.ReactNode; // 默认关闭按钮样式
+  beforeClose?: () => void;
+  onClose?: () => void;
+}
+
+interface TBAlertStates {
+  visible: boolean;
+}
+
+export default class TBAlert extends Component<TBAlertProps, TBAlertStates> {
+  static propTypes = {
+    type: PropTypes.string,
+    showIcon: PropTypes.bool,
+    massage: PropTypes.string,
+    description: PropTypes.string,
+    closeable: PropTypes.bool,
+    closeText: PropTypes.string,
+  };
+  defaultProps = {
+    type: 'success', // alert类型
+    showIcon: false, // 是否显示icon图标
+    message: '', // 默认标题
+    description: '', // 默认详情描述
+    closeable: true, // 默认显示关闭按钮
+    closeText: <span>x</span>, // 默认关闭按钮样式
+  };
+  constructor(props: TBAlertProps) {
+    super(props);
     this.state = {
       visible: true,
-    }
+    };
   }
-  close(e) {
+  close(e: any) {
     const evt = e || event;
     evt.preventDefault();
     if (this.props.beforeClose) { // 窗口关闭前
@@ -19,10 +50,10 @@ export default class TBAlert extends Component {
     if (this.props.onClose) {
       this.setState({ visible: false });
       this.props.onClose();
-    }  
+    }
   }
 
-  iconType(type) {
+  iconType(type: string) {
     switch (type) {
       case 'success':
         return 'icon-tishichenggong';
@@ -39,7 +70,7 @@ export default class TBAlert extends Component {
 
   iconClassName() {
     const { type } = this.props;
-    return `iconfont ${this.iconType(type)}`
+    return `iconfont ${this.iconType(type)}`;
   }
 
   render() {
@@ -55,7 +86,8 @@ export default class TBAlert extends Component {
       <>
       {
         this.state.visible ?
-        <div style={this.style()} className={this.className('tb-alert','clear', `tb-alert-${type}`)}>
+        <div style={this.props.type ? this.style(this.props.type) : {}}
+        className={this.className('tb-alert', 'clear', `tb-alert-${type}`)}>
           {
             showIcon ?
               <div className="tb-alert-icon">
@@ -75,7 +107,7 @@ export default class TBAlert extends Component {
           </div>
           {
             closeable ?
-              <div 
+              <div
                 className="tb-alert-close"
                 onClick={this.close.bind(this)}
               >{closeText}</div> : null
@@ -83,22 +115,6 @@ export default class TBAlert extends Component {
         </div> : null
       }
       </>
-    )
+    );
   }
-}
-TBAlert.defaultProps = {
-  type: 'success', // alert类型
-  showIcon: false, //是否显示icon图标
-  message: '', // 默认标题
-  description: '', // 默认详情描述
-  closeable: true, // 默认显示关闭按钮
-  closeText: 'x', // 默认关闭按钮样式
-}
-TBAlert.propTypes = {
-  type: PropTypes.string,
-  showIcon: PropTypes.bool,
-  massage: PropTypes.string,
-  description: PropTypes.string,
-  closeable: PropTypes.bool,
-  closeText: PropTypes.string,
 }
