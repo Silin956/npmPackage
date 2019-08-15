@@ -75,11 +75,11 @@ npm publish // 打包并上传组件至npm仓库（注意：每次上传前需�
 
 |   参数名   |   类型   |   可选参数   |   默认值   |  描述    |
 | -------- | -------- | ----------- | --------- | -------- |
-| type  | string | `success | warn | info | error` | success | 设置alert提示框的主题风格 |
-| showIcon | boolean | `true | false` | false | 是否显示icon图标 |
+| type  | string | `success``warn``info``error` | success | 设置alert提示框的主题风格 |
+| showIcon | boolean | `true``false` | false | 是否显示icon图标 |
 | message  | string  | -- | '' | 默认标题内容 |
 | description | string | -- | '' | 默认详情描述信息 |
-| closeable   | boolean | `true | false` | true | 设置默认状态下是否显示关闭按钮 |
+| closeable   | boolean | `true``false` | true | 设置默认状态下是否显示关闭按钮 |
 | closeText   | string  | -- | `<span>x<span>` | 默认关闭按钮样式 |
 
 #### 方法
