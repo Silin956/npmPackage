@@ -9,7 +9,7 @@ interface TBAlertProps {
   message: string; // 默认标题
   description: string; // 默认详情描述
   closeable: boolean; // 默认显示关闭按钮
-  closeText: React.ReactNode; // 默认关闭按钮样式
+  // closeText: React.ReactNode; // 默认关闭按钮样式
   beforeClose?: () => void;
   onClose?: () => void;
 }
@@ -25,7 +25,7 @@ export default class TBAlert extends Component<TBAlertProps, TBAlertStates> {
     massage: PropTypes.string,
     description: PropTypes.string,
     closeable: PropTypes.bool,
-    closeText: PropTypes.string,
+    closeText: PropTypes.element,
   };
   defaultProps = {
     type: 'success', // alert类型

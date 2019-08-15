@@ -5,7 +5,9 @@ import { TBModel, TBAlert } from '../index';
 const App = () => {
   return (
     <>
-      <TBAlert message="shihis" description="是耍好苏啊好的时代" type="error" showIcon closeText={(<span>关闭</span>)}/>
+      <TBAlert message="shihis" description="是耍好苏啊好的时代" type="error" showIcon={true}
+      closeText={"关闭"}
+      />
       <TBModel/>
     </>
   );

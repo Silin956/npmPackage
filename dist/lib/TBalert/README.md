@@ -7,7 +7,7 @@
 | message  | string  | -- | '' | 默认标题内容 |
 | description | string | -- | '' | 默认详情描述信息 |
 | closeable   | boolean | true,false | true | 设置默认状态下是否显示关闭按钮 |
-| closeText   | string  | -- | x | 默认关闭按钮样式
+| closeText   | `React.ReactNode`  | -- | x | 默认关闭按钮样式
 
 ##方法
 | 方法名 | 说明 |

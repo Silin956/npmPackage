@@ -80,7 +80,7 @@ npm publish // 打包并上传组件至npm仓库（注意：每次上传前需�
 | message  | string  | -- | '' | 默认标题内容 |
 | description | string | -- | '' | 默认详情描述信息 |
 | closeable   | boolean | `true` `false` | true | 设置默认状态下是否显示关闭按钮 |
-| closeText   | string  | -- | `<span>x<span>` | 默认关闭按钮样式 |
+| closeText   | `React.ReactNode`  | -- | `<span>x<span>` | 默认关闭按钮样式 |
 
 #### 方法
 
